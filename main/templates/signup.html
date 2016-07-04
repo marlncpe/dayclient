@@ -1,0 +1,57 @@
+
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack" data-scroll="0">
+      <div class="w-nav navbar">
+        <div class="w-container">
+          <div class="wrapper-mask" data-ix="menu-mask"></div>
+          <div class="navbar-title">Registrate Aqui</div>
+          <a class="w-inline-block navbar-button" ui-sref="main"data-load="1">
+            <div class="navbar-button-icon icon ion-ios-close-empty"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="body padding" style="margin-top:70px;">
+        <div class="">
+          <div class="w-form">
+            <form novalidate>
+              <div>
+                <label class="label-form">NOMBRE</label>
+                <input ng-model="user.firstname" class="w-input input-form" type="text" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form">APELLIDO</label>
+                <input ng-model="user.lastname" class="w-input input-form" type="text" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form">CORREO</label>
+                <input ng-model="user.email" class="w-input input-form" type="email" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form">CONTRASEÑA</label>
+                <input ng-model="user.password" class="w-input input-form" type="password" required>
+              </div>
+              <button ng-click="register(user)" type="submit" class="w-button action-button estirado">Registrate</button>
+              <div class="separator-button"></div>
+              <a class="link-upper estirado" ui-sref="main">¿TIENES YA UNA CUENTA? <strong class="b-link">INICIA SESSIÓN!</strong></a>
+            </form>
+            <!--<div class="w-form-done">
+              <p>Gracias! Tu registro fue exitoso!</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Ocurrio un error con algunos de tus datos,</p>
+              <p>Intenta de nuevo.</p>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </ion-content>
+</ion-view>

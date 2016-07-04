@@ -1,0 +1,46 @@
+
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack">
+      <div class="w-nav navbar">
+        <div class="w-container">
+          <div class="wrapper-mask" data-ix="menu-mask"></div>
+          <div class="navbar-title">Recuperar Contraseña</div>
+          <a class="w-inline-block navbar-button" ui-sref="main">
+            <div class="navbar-button-icon icon ion-ios-close-empty"></div>
+          </a>
+        </div>
+      </div>
+      <div class="body padding">
+        <div class="logo-login bigger"></div>
+        <div class="">
+          <div class="w-form">
+            <form id="submit-form">
+              <div>
+                <label class="label-form" for="email-field">CORREO ELECTRONICO</label>
+                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <div class="separator-button"></div>
+              </div>
+              <a class="w-button action-button estirado">Enviar Notificación</a>
+              <div class="separator-button"></div>
+              <a class="link-upper estirado" ui-sref="signup">¿TU NO TIENES CUENTA? 
+                <strong class="b-link">CREALA YA!</strong>
+              </a>
+            </form>
+            <div class="w-form-done">
+              <p>Revisa tu correo electronico y cambia tu clave!</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Ocurrio un error con algunos de tus datos,</p>
+              <p>Intenta de nuevo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </ion-content>
+</ion-view>

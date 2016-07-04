@@ -1,0 +1,62 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack">
+      <div class="w-nav navbar" data-collapse="all">
+        <div class="w-container">
+          <div class="wrapper-mask" data-ix="menu-mask"></div>
+          <div class="navbar-title">Crear Articulo</div>
+          <a class="w-inline-block navbar-button right bigger" ng-click="save(item)">
+            <div class="navbar-button-icon icon ion-ios-checkmark-empty"></div>
+          </a>
+          <a class="w-inline-block navbar-button" ui-sref="menu.lists">
+            <div class="navbar-button-icon icon ion-ios-close-empty"></div>
+          </a>
+        </div>
+      </div>
+      <div class="body">
+        <div class="w-form padding">
+           <form id="email-form">
+            
+            <div class="background-grey"></div>
+            <div class="row-input-list">
+              <label class="label-form">TITULO / NOMBRE DEL ARTÍCULO</label>
+              <input class="w-input input-form in-grey" ng-model="item.nombre" type="text" required="required">
+              <div class="separator-fields"></div>
+            </div>
+
+             <div class="row-input-list">
+              <label class="label-form">DESCRIPCIÓN DEL ARTÍCULO</label>
+              <input class="w-input input-form in-grey" ng-model="item.descripcion" type="text" required="required">
+              <div class="separator-fields"></div>
+            </div>
+             
+            <div class="background-grey"></div>      
+            <div class="row-input-list">
+              <label class="label-form">SERIAL / CÓDIGO</label>
+              <input class="w-input input-form in-grey" ng-model="item.serial" type="text" required="required">
+              <div class="separator-fields"></div>
+            </div>
+
+            
+            <div class="row-input-list">
+              <label class="label-form">CANTIDAD A INGRESAR</label>
+              <input class="w-input input-form in-grey" ng-model="item.cantidadEntrante" type="text" required="required">
+              <div class="separator-fields"></div>
+            </div>
+
+            <div class="background-grey"></div> 
+            <div class="row-input-list">
+              <label class="label-form">FECHA INGRESO</label>
+              <input class="w-input input-form in-grey" ng-model="item.fechaMovimiento" type="text" required="required">
+              <div class="separator-fields"></div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </ion-content>
+</ion-view>

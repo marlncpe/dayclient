@@ -1,0 +1,76 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+    <section class="w-section mobile-wrapper">
+      <div class="page-content" id="main-stack" style="z-index:99px">
+        <div class="w-nav navbar" data-collapse="all" >
+          <div class="w-container">
+            <div class="wrapper-mask" data-ix="menu-mask"></div>
+            <div class="navbar-title">
+              <!--<ng-form>
+                <input class="w-input input-form" style="width:50%; margin-left:-20%; " placeholder='Buscar Por Nombre'/>
+              </form>-->
+              Todos los Articulos Inventario 
+            </div>
+            <div class="w-nav-button navbar-button left">
+              <div class="navbar-button-icon home-icon" id="menu-button" menu-toggle="left">
+                <div class="bar-home-icon"></div>
+                <div class="bar-home-icon"></div>
+                <div class="bar-home-icon"></div>
+              </div>
+            </div>
+            <div class="w-nav-button navbar-button rigth" id="group-add">
+              <a ui-sref="menu.add-lists">
+                <div class="navbar-button-icon ion-ios-plus-empty">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="body" >
+          <div class="w-tabs" data-duration-in="400" data-duration-out="400" data-easing="ease-out-quint">
+
+            <div class="w-tab-content tabs-content">
+              <div id="groupCard" class="w-tab-pane w--tab-active w-clearfix tab-pane">
+                <table border="1" style="margin-top:30px;margin-left:5px;width:100%; border: 1px solid black;"> 
+                  <thead style="background:#fff;  border: 1px solid black;">
+                    <tr>
+                      <td style="border: 1px solid black;">N°</td>
+                      <td style="border: 1px solid black;">Nombre o Descripción</td>
+                      <td style="border: 1px solid black;">Serial / Codigo / Referencia</td>
+                      <td style="border: 1px solid black;">Fecha Movimiento</td>
+                      <td style="border: 1px solid black;">Cantidad Ingresada</td>
+                      <td style="border: 1px solid black;">Cantidad Retirada</td>
+                      <td style="border: 1px solid black;">Cantidad Existente</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="item in items">
+                      <td style="border: 1px solid black;">{{item.id}}</td>
+                      <td style="border: 1px solid black;"><a ng-click="showdatalist({{item.id}})">{{item.nombre}}</a></td>
+                      <td style="border: 1px solid black;">{{item.serial}}</td>
+                      <td align="center"style="border: 1px solid black;">{{item.fecha_movimiento}}</td>
+                      <td align="center"style="border: 1px solid black;">{{item.cantidad_entrante}}</td>
+                      <td align="center"style="border: 1px solid black;">{{item.cantidad_retirada}}</td>
+                      <td align="center"style="border: 1px solid black;">{{item.cantidad_total}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </ion-content>
+</ion-view>
+<walkthrough 
+  id="Demo1"
+  walkthrough-type="transparency"
+  focus-element-id="group-add"
+  icon="single_tap"
+  main-caption="Si necesitas crear un nuevo item o sacar alguno de los existentes presiona el boton señalado"
+  icon-padding-left="-20"
+  icon-padding-top="20"
+  is-active="true">
+</walkthrough>

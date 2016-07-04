@@ -1,0 +1,63 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <!-- CONTENT -->
+  <ion-side-menu-content>
+
+    <!-- header bar -->
+    <!-- the nav bar will be updated as we navigate between views -->
+    <ion-nav-bar class="bar-assertive">
+      <!-- back button, shown if applicable -->
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <!-- nav button, shown if applicable -->
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- ROUTING INJECTED HERE: pageContent -->
+    <ion-nav-view name="pageContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <!-- SIDEMENU -->
+  <ion-side-menu side="left">
+
+    <!-- menu content -->
+    <ion-content>
+      <nav class="w-nav-menu nav-menu" role="navigation">
+        <div class="nav-menu-header">
+          
+          <div class="menu-profile-content-options">
+            <div class="menu-profile-left">
+              <div class="space-up"></div>
+              <i class="menu-profile-icon ion-edit"></i>
+            </div>
+            <div class="menu-profile-picture"></div>
+            <div class="menu-profile-right">
+              <div class="space-up"></div>
+              <i class="menu-profile-icon ion-ios-unlocked"></i>
+            </div>
+          </div>
+          <div class="menu-profile-names">Usuario, Usuario</div>
+        </div>
+        <a class="w-clearfix w-inline-block nav-menu-link">
+          <div class="icon-list-menu">
+            <div class="icon ion-ios-keypad-outline"></div>
+          </div>
+          <div class="nav-menu-titles">inventarios</div>
+          <div class="nav-menu-text-right">1</div>
+        </a>
+        <a class="w-clearfix w-inline-block nav-menu-link">
+          <div class="icon-list-menu">
+            <div class="icon ion-log-out"></div>
+          </div>
+          <div class="nav-menu-titles">Salir</div>
+        </a>
+      </nav><!--//ion-ios-unlocked-outline-->
+    </ion-content>
+
+  </ion-side-menu>
+
+</ion-side-menus>

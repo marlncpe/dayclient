@@ -1,0 +1,53 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+  <section class="w-section mobile-wrapper" ng-init="tipoInventario()">
+
+    <div class="page-content" id="main-stack">
+      <div class="w-nav navbar" data-collapse="all">
+        <div class="w-container">
+          <div class="wrapper-mask" data-ix="menu-mask"></div>
+          <div class="navbar-title">Crear Inventario</div>
+          <a class="w-inline-block navbar-button right bigger" ng-click="execute(inventariodata)">
+            <div class="navbar-button-icon icon ion-ios-checkmark-empty"></div>
+          </a>
+          <a class="w-inline-block navbar-button" ui-sref="menu.home">
+            <div class="navbar-button-icon icon ion-ios-close-empty"></div>
+          </a>
+        </div>
+      </div>
+      <div class="body">
+        <div class="w-form padding">
+          <ng-form id="formAddinventario">
+           
+            <div class="row-input-list">
+              <label class="label-form">TITULO / NOMBRE</label>
+              <input class="w-input input-form in-grey" type="text" ng-model="inventariodata.nombre"  required="required">
+              <div class="separator-fields"></div>
+            </div>
+            <div class="row-input-list">
+              <label class="label-form">UBICACIÓN</label>
+              <input class="w-input input-form in-grey" type="text" ng-model="inventariodata.ubicacion"  required="required">
+              <div class="separator-fields"></div>
+            </div>
+            <div class="row-input-list">
+              <label class="label-form">TIPO INVENTARIO</label>
+              <select class="w-input select-form in-grey" type="text" ng-model="inventariodata.tipo" ng-options="s.nombre for s in tipos">
+              </select>
+              <div class="separator-fields"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </ion-content>
+</ion-view>
+<walkthrough 
+  walkthrough-type="transparency"
+  focus-element-id="formAddinventario"
+  icon="double_tap"
+  main-caption="Puedes crear inventarios nuevos para usar por medio de este formulario."
+  icon-padding-left="-20"
+  icon-padding-top="-40"
+  is-active="true">
+</walkthrough>

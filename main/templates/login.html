@@ -1,0 +1,36 @@
+
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+  <section class="w-section mobile-wrapper" style="margin-top:-65px;">
+
+    <div class="page-content" id="main-stack" data-scroll="0">
+      <div class="body padding" >
+        <div class="splash-logo"></div>
+        <div class="">
+          <div class="w-form">
+            <form id="submit-form" ng-submit="login(loginForm)" name="loginForm" novalidate>
+              <div>
+                <label class="label-form">CORREO ELECTRONICO</label>
+                <input class="w-input input-form" type="text" ng-model="model.username" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form">CLAVE</label>
+                <div class="w-clearfix block-input-combined">
+                  <input class="w-input input-form left" type="password" ng-model="model.password" required><a class="right-input-link" ui-sref="forgot" data-load="1">Recuperar Clave</a>
+                </div>
+                <div class="separator-button-input"></div>
+              </div>
+              <button class="w-button action-button estirado">Entrar</button><!--metodo maqueta-->
+              <div class="separator-button"></div><a class=" estirado link-upper" ui-sref="signup">¿TU NO TIENES CUENTA? <strong class="b-link">CREALA YA!</strong></a>
+            </form>
+            <div class="alert alert-danger w-form-fail" ng-repeat="error in errors.password">{{error}}</div>
+            <div class="alert alert-danger w-form-fail" ng-repeat="error in errors.non_field_errors">{{error}}</div>
+            <div class="alert alert-danger w-form-fail" ng-if="error">{{error}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </ion-content>
+</ion-view>

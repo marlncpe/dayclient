@@ -1,0 +1,65 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+    <section class="w-section mobile-wrapper">
+      <div class="page-content" id="main-stack" style="z-index:99px">
+        <div class="w-nav navbar" data-collapse="all" >
+          <div class="w-container">
+            <div class="wrapper-mask" data-ix="menu-mask"></div>
+            <div class="navbar-title">Todos los Inventarios</div>
+            <div class="w-nav-button navbar-button left">
+              <div class="navbar-button-icon home-icon" id="menu-button" menu-toggle="left">
+                <div class="bar-home-icon"></div>
+                <div class="bar-home-icon"></div>
+                <div class="bar-home-icon"></div>
+              </div>
+            </div>
+            <div class="w-nav-button navbar-button rigth" id="group-add">
+              <a ui-sref="menu.add-groups">
+                <div class="navbar-button-icon ion-ios-plus-empty">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="w-tabs" data-duration-in="400" data-duration-out="400" data-easing="ease-out-quint">
+            <div class="w-tab-content tabs-content">
+              <div id="groupCard" class="w-tab-pane w--tab-active w-clearfix tab-pane">
+                <div class="group-block last" mn-touch hold="menu({{inventario.id}})" ng-repeat="inventario in inventarios">
+                  
+                  <div class="w-inline-block card-shadows estirado">
+                    <div class="group-image" style="background-color:white; border-style: solid; border-bottom: thick dotted #000000;" ng-click="open({{inventario.id}})">
+                      <a href="">
+                        <img src="main/assets/images/logo.png" class="card-image">
+                      </a>
+                    </div>
+                    <div class="group-title">
+                      <div class="group-icon-left">
+                        <a class="ion-android-delete" ng-click="delete({{inventario.id}})"></a>
+                      </div>
+                      <div class="group-icon-right">
+                        <div class="ion-plus"></div>
+                      </div>
+                      <div class="title-text-litle">{{inventario.nombre}}</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </ion-content>
+</ion-view>
+<walkthrough 
+  walkthrough-type="transparency"
+  focus-element-id="group-add"
+  icon="single_tap"
+  main-caption="Si necesitas crear un nuevo inventario presiona el boton señalado"
+  icon-padding-left="-20"
+  icon-padding-top="20"
+  is-active="true">
+</walkthrough>

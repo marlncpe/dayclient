@@ -1,0 +1,92 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <ion-content>
+    <section class="w-section mobile-wrapper">
+
+      <div class="page-content" id="main-stack">
+        <div class="w-nav navbar" data-collapse="all">
+          <div class="w-container">
+            <div class="wrapper-mask" data-ix="menu-mask"></div>
+            <div class="navbar-title">Items de la lista</div>
+            <a class="w-inline-block navbar-button right bigger" ui-sref="menu.lists-item-add">
+              <div class="navbar-button-icon icon ion-ios-plus-empty"></div>
+            </a>
+            <a class="w-inline-block navbar-button" ui-sref="menu.lists">
+              <div class="navbar-button-icon icon ion-ios-close-empty"></div>
+            </a>
+          </div>
+        </div>
+        <div class="body">
+          <div class="hero-image {{listdata[0].color}}">
+            <div class="hero-image-title">
+              <h2 class="link-white">{{listdata[0].nombre}}</h2>
+              <countitems listid="{{listdata[0].id}}" update="{{updateCount}}"></countitems>
+            </div>
+            <div class="hero-image-img {{listdata[0].color}}"><img src="main/assets/images/photo-1429032021766-c6a53949594f.jpg">
+            </div>
+          </div>
+          <ul class="list">
+            <li class="list-item" mn-touch holdfor="2000" hold="menu({{item.id}})" ng-repeat="item in items">
+              <a class="w-clearfix w-inline-block">
+                <div ng-click="changeStatus({{item.id}}, '{{item.status}}', {{item.positionarray}})" class="icon-list highlighted">
+                  <icon-item-status texto="{{item.status}}" />
+                </div>
+                <div ng-click="open({{item.id}})" class="title-list">{{item.nombre}}</div>
+                <div ng-click="open({{item.id}})" class="navbar-button right" style="margin-top:5px;">
+                  <a class="navbar-button-icon">
+                    <icon-item-description texto="{{item.description}}"/>
+                  </a>
+                </div>
+              </a>
+            </li>
+            <!--
+            <li class="list-item grey highlighted" data-ix="list-item">
+              <a class="w-clearfix w-inline-block highlighted">
+                <div class="icon-list highlighted">
+                  <div class="icon ion-ios-checkmark-empty"></div>
+                </div>
+                <div class="title-list">Item o taasdasdasdasdas...</div>
+                <div class="navbar-button right" style="margin-top:5px;">
+                  <a class="navbar-button-icon icon ion-chatbox-working" ui-sref="menu.lists-item-description"></a>
+                </div>
+              </a>
+            </li>
+            <li mn-touch tap="ejemplo()" class="list-item" data-ix="list-item">
+              <a class="w-clearfix w-inline-block" >
+                <div class="icon-list">
+                  <div class="icon ion-ios-circle-outline"></div>
+                </div>
+                <div class="title-list">Item o tarea 2</div>
+              </a>
+            </li>
+            <li mn-touch secure-tap="ejemplo()" class="list-item grey highlighted" data-ix="list-item">
+              <a class="w-clearfix w-inline-block highlighted" >
+                <div class="icon-list highlighted">
+                  <div class="icon ion-ios-checkmark-empty"></div>
+                </div>
+                <div class="title-list">Item o tarea 3</div>
+              </a>
+            </li>
+            <li mn-touch hold="ejemplo()" class="list-item grey highlighted" data-ix="list-item">
+              <a class="w-clearfix w-inline-block highlighted" >
+                <div class="icon-list highlighted">
+                  <div class="icon ion-ios-checkmark-empty"></div>
+                </div>
+                <div class="title-list">Item o tarea 4</div>
+              </a>
+            </li>
+            <li mn-touch threshold="30" secure-tap="ejemplo()" class="list-item grey highlighted" data-ix="list-item">
+              <a class="w-clearfix w-inline-block highlighted">
+                <div class="icon-list highlighted">
+                  <div class="icon ion-ios-checkmark-empty"></div>
+                </div>
+                <div class="title-list">Item o tarea 5</div>
+              </a>
+            </li>
+          -->
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </ion-content>
+</ion-view>
